@@ -1,0 +1,29 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>
+
+    </title>
+</head>
+<body>
+<h2>Create A Dog</h2>
+    <form action='create' method='post'>
+        <div>
+            <label>Dog Name</label>
+            <input type='text' name='name' th:field="${dog.name}" />
+            <p style="color: #FF0000" th:errors="${dog.name}"></p>
+        </div>
+        <div>
+            <label>Dog Age</label>
+            <input type='text' name='name' th:field="${dog.age}" />
+            <p style="color: #FF0000" th:errors="${dog.age}"></p>
+        </div>
+        <div>
+            <label>Owner</label>
+            <select name="ownerId" id="ownerId">
+                <option th:each="owner : ${owners}" th:value="${owner.id}" th:text="${owner.name}"></option>
+            </select>
+        </div>
+        <input type='submit' value='Create!' />
+    </form>
+</body>
+</html>

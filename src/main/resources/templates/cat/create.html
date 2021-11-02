@@ -1,0 +1,24 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>
+
+    </title>
+</head>
+<body>
+<h2>Create A Cat</h2>
+    <form action='create' method='post'>
+        <div>Name</div>
+        <input type='text' name='name' th:field="${cat.name}" />
+        <p style="color: #FF0000" th:errors="${cat.name}"></p>
+        <div>Age</div>
+        <input type='number' name='age' th:field="${cat.age}" />
+        <p style="color: #FF0000" th:errors="${cat.age}"></p>
+        <div>Owner Name</div>
+        <input type='text' name='ownerName' th:field="${cat.ownerName}" />
+        <p style="color: #FF0000" th:errors="${cat.ownerName}"></p>
+        <div>
+            <input type='submit' value='Create!' />
+        </div>
+    </form>
+</body>
+</html>
