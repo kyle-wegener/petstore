@@ -61,7 +61,7 @@ public class DogController {
         dogs.add(dogToy.getDog());
         dogToy.getToy().setDogs(null);
 
-        toyRepository.save(toy);
+        /* toyRepository.save(toy);
         Dog dog = dogOptional.get();
 
         // Related them together\
@@ -79,12 +79,12 @@ public class DogController {
             dog.setToys(toys);
         } else {
             dog.getToys().add(toy);
-        }
+        } */
 
 
-        DogToyDTO dogToy = new DogToyDTO();
-        dogToy.setDog(dog);
-        dogToy.setToy(toy);
+        // DogToyDTO dogToy = new DogToyDTO();
+        // dogToy.setDog(dog);
+        // dogToy.setToy(toy);
 
         toyRepository.save(dogToy.getToy());
         dogRepository.save(dogToy.getDog());

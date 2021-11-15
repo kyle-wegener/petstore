@@ -15,7 +15,7 @@ public class Owner {
 
     private String city;
 
-    @OneToMany
+    @OneToMany(mappedBy="owner")
     private List<Dog> dogs;
 
     public Owner() { }
